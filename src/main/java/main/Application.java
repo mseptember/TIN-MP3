@@ -1,11 +1,10 @@
-package applicationPackage;
+package main;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 @SpringBootApplication
@@ -15,7 +14,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
+    /*@Bean
     CommandLineRunner init(ObuwieRepository obuwieRepository) {
         //AtomicInteger id = new AtomicInteger();
         return args -> {
@@ -25,5 +24,5 @@ public class Application {
             });
             obuwieRepository.findAll().forEach(System.out::println);
         };
-    }
+    }*/
 }

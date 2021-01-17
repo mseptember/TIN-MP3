@@ -1,4 +1,4 @@
-package zamowieniePackage;
+package main;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class Zawmowienie {
+public class Zamowienie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idZamowienia;
@@ -15,13 +15,13 @@ public class Zawmowienie {
     private Date data;
     private double suma;
 
-    public Zawmowienie() {
+    public Zamowienie() {
         this.nrZamowienia = 0;
         this.data = null;
         this.suma = 0;
     }
 
-    public Zawmowienie(int nrZamowienia, Date data, double suma) {
+    public Zamowienie(int nrZamowienia, Date data, double suma) {
         this.nrZamowienia = nrZamowienia;
         this.data = data;
         this.suma = suma;

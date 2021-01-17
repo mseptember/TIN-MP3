@@ -1,4 +1,4 @@
-package klientPackage;
+package main;
 
 import org.springframework.web.bind.annotation.*;
 

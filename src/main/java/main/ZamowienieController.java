@@ -1,4 +1,4 @@
-package zamowieniePackage;
+package main;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -14,12 +14,12 @@ public class ZamowienieController {
     }
 
     @GetMapping("/zamowienie")
-    public List<Zawmowienie> getZamowienie() {
-        return (List<Zawmowienie>) zamowienieRepository.findAll();
+    public List<Zamowienie> getZamowienie() {
+        return (List<Zamowienie>) zamowienieRepository.findAll();
     }
 
     @PostMapping("/zamowienie")
-    void addObuwie(@RequestBody Zawmowienie zamowienie) {
+    void addObuwie(@RequestBody Zamowienie zamowienie) {
         zamowienieRepository.save(zamowienie);
     }
 }

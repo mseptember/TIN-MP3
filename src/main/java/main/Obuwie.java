@@ -1,4 +1,4 @@
-package applicationPackage;
+package main;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -71,7 +71,7 @@ public class Obuwie {
 
     @Override
     public String toString() {
-        return "applicationPackage.Obuwie{" +
+        return "main.Obuwie{" +
                 "id=" + idObuwia +
                 ", marka='" + marka + '\'' +
                 ", rozmiar=" + rozmiar +
