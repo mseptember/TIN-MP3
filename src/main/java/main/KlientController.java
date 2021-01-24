@@ -1,5 +1,6 @@
 package main;
 
+import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,9 @@ public class KlientController {
 
     @PostMapping("/klient")
     void addKlient(@RequestBody Klient klient) {
+        if(!EmailValidator.getInstance().isValid(klient.getEmail())){
+            return; //niech zwraca sb error
+        }
         klientRepository.save(klient);
     }
 }

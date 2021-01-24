@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Klient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idKlienta;
+    private Long idKlienta;
     private String imie;
     private String nazwisko;
     private String email;
@@ -22,7 +22,7 @@ public class Klient {
     public Klient() {
         this.imie = "";
         this.nazwisko = "";
-        this. email = "";
+        this.email = "";
         this.haslo = "";
         this.nrTelefonu = "";
         this.ulica = "";
@@ -30,7 +30,7 @@ public class Klient {
         this.kodPocztowy = "";
     }
 
-    public Klient(int idKlienta, String imie, String nazwisko, String email, String haslo, String nrTelefonu, String ulica, String miasto, String kodPocztowy) {
+    public Klient(String imie, String nazwisko, String email, String haslo, String nrTelefonu, String ulica, String miasto, String kodPocztowy) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.email = email;
@@ -41,11 +41,11 @@ public class Klient {
         this.kodPocztowy = kodPocztowy;
     }
 
-    public int getIdKlienta() {
+    public Long getIdKlienta() {
         return idKlienta;
     }
 
-    public void setIdKlienta(int idKlienta) {
+    public void setIdKlienta(Long idKlienta) {
         this.idKlienta = idKlienta;
     }
 

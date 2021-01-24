@@ -10,7 +10,7 @@ import java.util.Date;
 public class Zamowienie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idZamowienia;
+    private Long idZamowienia;
     private int nrZamowienia;
     private Date data;
     private double suma;
@@ -27,11 +27,11 @@ public class Zamowienie {
         this.suma = suma;
     }
 
-    public int getIdZamowienia() {
+    public Long getIdZamowienia() {
         return idZamowienia;
     }
 
-    public void setIdZamowienia(int idZamowienia) {
+    public void setIdZamowienia(Long idZamowienia) {
         this.idZamowienia = idZamowienia;
     }
 

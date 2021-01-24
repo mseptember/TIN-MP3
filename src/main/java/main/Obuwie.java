@@ -9,31 +9,31 @@ import javax.persistence.Id;
 public class Obuwie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idObuwia;
+    private Long idObuwia;
     private String marka;
-    private int rozmiar;
+    private String rozmiar;
     private String material;
     private double cena;
 
     public Obuwie() {
         this.marka = "";
-        this.rozmiar = 0;
+        this.rozmiar = "";
         this.material = "";
         this.cena = 0;
     }
 
-    public Obuwie(String marka, int rozmiar, String material, double cena) {
+    public Obuwie(String marka, String rozmiar, String material, double cena) {
         this.marka = marka;
         this.rozmiar = rozmiar;
         this.material = material;
         this.cena = cena;
     }
 
-    public int getIdObuwia() {
+    public Long getIdObuwia() {
         return idObuwia;
     }
 
-    public void setIdObuwia(int idObuwia) {
+    public void setIdObuwia(Long idObuwia) {
         this.idObuwia = idObuwia;
     }
 
@@ -45,11 +45,11 @@ public class Obuwie {
         this.marka = marka;
     }
 
-    public int getRozmiar() {
+    public String getRozmiar() {
         return rozmiar;
     }
 
-    public void setRozmiar(int rozmiar) {
+    public void setRozmiar(String rozmiar) {
         this.rozmiar = rozmiar;
     }
 
