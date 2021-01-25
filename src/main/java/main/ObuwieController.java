@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+@RestController //odbiera info z frontu, przesyła do serwisu i odsyła wynik do frontu
 @CrossOrigin(origins = "http://localhost:4200")
 public class ObuwieController {
     private final ObuwieRepository obuwieRepository;

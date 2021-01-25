@@ -1,16 +1,12 @@
 package main;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Random;
-import java.util.stream.Stream;
 
 @SpringBootApplication
 public class Application {
@@ -19,7 +15,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
+    /*@Bean
     CommandLineRunner init(ObuwieRepository obuwieRepository, KlientRepository klientRepository, ZamowienieRepository zamowienieRepository) {
         //AtomicInteger id = new AtomicInteger();
         return args -> {
@@ -41,7 +37,7 @@ public class Application {
             });
             zamowienieRepository.findAll().forEach(System.out::println);
         };
-    }
+    }*/
 
     private static double round(double value, int places) { // metoda ze StackOverflow do wycinania miejsc po przecinku w double (dla ceny produktu)
         if (places < 0) throw new IllegalArgumentException();

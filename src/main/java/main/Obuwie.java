@@ -1,18 +1,20 @@
 package main;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Obuwie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "IDOBUWIA")
     private Long idObuwia;
+    @Column(name = "MARKA")
     private String marka;
+    @Column(name = "ROZMIAR")
     private String rozmiar;
+    @Column(name = "MATERIAL")
     private String material;
+    @Column(name = "CENA")
     private double cena;
 
     public Obuwie() {

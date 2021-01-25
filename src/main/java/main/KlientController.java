@@ -20,9 +20,9 @@ public class KlientController {
     }
 
     @PostMapping("/klient")
-    void addKlient(@RequestBody Klient klient) {
-        if(!EmailValidator.getInstance().isValid(klient.getEmail())){
-            return; //niech zwraca sb error
+    void addKlient(@RequestBody Klient klient) { // PROSTA WALIDACJA PO STRONIE SERWERA
+        if(!EmailValidator.getInstance().isValid(klient.getEmail())){ // TODO -> ZROBIONA! WALIDACJA PO STRONIE SERWERA
+            return;
         }
         klientRepository.save(klient);
     }
